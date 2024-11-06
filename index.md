@@ -1,5 +1,5 @@
 # Hello world
-**Hello** this is a [link](!https://www.google.com)
+**Hello** this is a [link](https://www.example.com)
 
 This is a image: <br> <img src="HHH" alt="A fancy image">
 

@@ -1,5 +1,5 @@
 addEventListener("load", function(){
-    let elever=documents.getElementById("FTCDashVer");
+    let elever=document.getElementById("FTCDashVer");
     function showErrorMsg(){
         elever.innerHTML = "Failed to get latest version, please visit <a href=\"https://acmerobotics.github.io/ftc-dashboard/gettingstarted\"><strong>this</strong></a> site to get latest version."
     }

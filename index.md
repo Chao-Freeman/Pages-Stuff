@@ -1,7 +1,25 @@
 # Hello world
-**Hello** this is a [link](!https://www.example.com)
+**Hello** this is a [link](!https://www.google.com)
 
-This is a image: <br> <img src="https://www.example.com/example.png" alt="A fancy image">
+This is a image: <br> <img src="HHH" alt="A fancy image">
 
 Here's some script:
-<script>alert("Hello")</script>
+<script>
+    addEventListener("onload", function(){
+        let elever=documents.getElementById("FTCDashVer");
+        function showErrorMsg(){
+            elever.innerHTML = "Failed to get latest version, please visit <a href=\"https://acmerobotics.github.io/ftc-dashboard/gettingstarted\"><strong>this</strong></a> site to get latest version."
+        }
+        fetch("https://acmerobotics.github.io/ftc-dashboard/gettingstarted").then(function success(result){
+            let r=result.text().match(/(?<=implementation 'com.acmerobotics.dashboard:dashboard:).+?(?=')/);
+            if(r!=null){
+                elever.innerText = r[0];
+            }
+            showErrorMsg();
+        }, function(result){
+            showErrorMsg();
+            console.error(result);
+        })
+    });
+</script>
+The latest version of FTC dashboard are <code id="FTCDashVer">updating...</code>
